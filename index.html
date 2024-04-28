@@ -1,40 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>SPA Presentation</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <a href="https://en.wikipedia.org/wiki/Single-page_application">
+            <img
+              src="./examples/assets/SPA-Logo.webp"
+              alt="SPA Logo"
+              style="
+                height: 300px;
+                margin: 0 auto 2rem auto;
+                background: transparent;
+              "
+              class="demo-logo"
+            />
+          </a>
+          <h3>The SPA Presentation</h3>
+          <p>
+            <small
+              >Created by
+              <a href="https://github.com/JeckJonnyQ">VLADISLAV REUT</a></small
+            >
+          </p>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section>
+          <p style="font-size: 50px; color: #42affa">Presentation Plan</p>
+          <ol style="font-size: 30px">
+            <li>What is SPA?</li>
+            <li>Architecture SPA</li>
+            <li>How works SPA (explain in squares)</li>
+            <li>Implementation options SPA</li>
+            <li>Advantages and disadvantages</li>
+            <li>SPA Development Tools (Frameworks SPA)</li>
+            <li>Where is SPA used?</li>
+          </ol>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <h2 style="color: #42affa; font-size: 45px">SPA</h2>
+          <p
+            style="
+              font-size: 25px;
+              max-width: 700px;
+              width: 100%;
+              margin-left: 130px;
+            "
+          >
+            <span style="color: #42affa">A Single Page Application (SPA)</span>
+            &#150; is a web application that loads just one HTML page and
+            continually updates its setup without requiring a full page reload
+            when the user switches on.
+          </p>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px; margin-bottom: 30px">
+            Architecture
+          </h2>
+          <p style="margin: 10px; font-size: 25px">
+            It includes the following main components:
+          </p>
+          <ul style="font-size: 25px; color: #f92672">
+            <li>HTML, CSS и JavaScript</li>
+            <li>Client-side</li>
+            <li>Routing and navigation</li>
+            <li>Components</li>
+            <li>State</li>
+            <li>AJAX</li>
+            <li>Frameworks and libraries</li>
+          </ul>
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2 style="color: #42affa; font-size: 45px; margin-bottom: 0px">
+              How works SPA
+            </h2>
+            <p style="margin: 0px; font-size: 20px">
+              Let's say you have a service where users look at colored squares.
+              The interface has buttons with colors that you can color the
+              shapes with. You have created both a static website and a
+              single-page application for the service:
+            </p>
+            <img
+              src="./examples/assets/SlideOne.PNG"
+              class="r-frame"
+              width="800"
+              height="300"
+              alt="SlideOne"
+            />
+          </section>
+
+          <section>
+            <img
+              src="./examples/assets/SlideTwo.PNG"
+              class="r-frame"
+              width="800"
+              height="300"
+              alt="SlideTwo"
+            />
+            <p style="margin: 0px; font-size: 20px">
+              At first glance, there is no difference between the site and the
+              application. To notice it, click on the button with a different
+              color.
+            </p>
+          </section>
+
+          <section>
+            <p style="margin: 0px; font-size: 20px">
+              Here it becomes noticeable that the site and the single-page
+              application behave differently:
+            </p>
+            <img
+              src="./examples/assets/SlideThree.PNG"
+              class="r-frame"
+              width="800"
+              height="450"
+              alt="SlideTwo"
+            />
+          </section>
+
+          <section>
+            <img
+              src="./examples/assets/SlideFour.PNG"
+              class="r-frame"
+              width="400"
+              height="220"
+              alt="SlideTwo"
+            />
+            <img
+              src="./examples/assets/SlideFive.PNG"
+              class="r-frame"
+              width="400"
+              height="220"
+              alt="SlideTwo"
+            />
+
+            <p
+              style="
+                margin: 10px 10px 10px 70px;
+                font-size: 15px;
+                max-width: 800px;
+              "
+            >
+              The entire site page will be updated. It turns out that we are
+              telling the server: “Hey, make the squares green.” He says: “Okay.
+              But here you have the site header and footer again, as well as
+              buttons and metadata.” And it returns an entirely new HTML file.
+            </p>
+            <p
+              style="
+                margin: 10px 10px 10px 70px;
+                font-size: 15px;
+                max-width: 800px;
+              "
+            >
+              In a single page app, only the color of the squares will update.
+              The browser sends a request to the server, it returns the required
+              parameter, the squares are colored, everything else remains
+              unchanged.
+            </p>
+            <p
+              style="
+                margin: 10px 10px 10px 70px;
+                font-size: 15px;
+                max-width: 800px;
+              "
+            >
+              Now imagine that you have not simple squares, but an online store.
+              The user moves from one product to another, but the page does not
+              reload, but dynamically updates the photo, name, description and
+              price. This is how spas work.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <p style="font-size: 50px; color: #42affa">IMPLEMENTATION OPTIONS</p>
+          <ol style="font-size: 20px; max-width: 500px">
+            <li style="margin-bottom: 10px">
+              <span style="color: #f92672">Server Side Rendering (SSR):</span>
+              In SSR, the server renders the application in a short time.
+            </li>
+            <li style="margin-bottom: 10px">
+              <span style="color: #f92672">Client Side Rendering (CSR):</span>
+              In CSR, the browser is what runs the show and gets the main data
+              from the server, and the application generates the views and
+              injects them into the DOM.
+            </li>
+            <li style="margin-bottom: 10px">
+              <span style="color: #f92672">Static Site Generators (SSG).</span>
+              With SSG, the server returns well-organized HTML containing a lot
+              of the page's information. This method is the fastest, but if you
+              need to make a change, the process of creating a new page will
+              take some time.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">ADVANTAGES</h2>
+          <ul style="font-size: 20px; max-width: 700px">
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Fast and responsive navigation</span
+              ><br />
+              &#150; SPA loads all the necessary information and resources
+              simultaneously when the page is initially loaded. Then, when
+              moving between sections or modules, the content is displayed
+              instantly without having to refresh the entire page. This allows
+              for fast and smooth navigation between different parts of the
+              application.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Greater user interactivity</span
+              ><br />
+              &#150; Using SPA, you can easily implement interactive elements
+              such as dynamically updating data on a page, filtering or sorting
+              information without reloading the page.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Less load on the server</span
+              ><br />
+              &#150; SPA loads only the necessary code and resources on initial
+              load, and then operates in an on-demand mode to update data. This
+              reduces the load on the server and reduces the use of network
+              traffic, which is especially important when working with mobile
+              devices or slow Internet connections.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Easier development and maintenance</span
+              ><br />
+              &#150; Developers can create a single page application using one
+              programming language - JavaScript, instead of using different
+              technologies for developing the client and server parts.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Ability to work offline</span
+              ><br />
+              &#150; SPA saves the last loaded page and data on the user's
+              device.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">DISADVANTAGES</h2>
+          <ul style="font-size: 20px; max-width: 700px">
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Large initial download size</span
+              ><br />
+              &#150; For large and complex applications, this can result in long
+              loading times, especially when using slow Internet connections or
+              mobile devices.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Limited search engine support</span
+              ><br />
+              &#150; Since all information on an SPA is displayed on one page,
+              search engines may have difficulty processing and indexing the
+              content.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >RAM consumption</span
+              ><br />
+              &#150; SPA stores all downloaded resources in RAM on the client
+              device. When working with a large amount of data or using an
+              application for a long time, this can lead to significant memory
+              consumption and slow down the device.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Safety problems</span
+              ><br />
+              &#150; Since all application code and data resides on the client
+              side, this makes SPA more susceptible to attacks and possible data
+              leaks.
+            </li>
+          </ul>
+        </section>
+
+        <section
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <h2 style="color: #42affa; font-size: 45px">SPA FRAMEWORKS</h2>
+          <img
+            style="margin: 0px"
+            src="./examples/assets/GraphOne.PNG"
+            class="r-frame"
+            width="600"
+            height="300"
+            alt="SlideOne"
+          />
+          <p
+            style="
+              font-size: 25px;
+              max-width: 700px;
+              width: 100%;
+              margin-left: 130px;
+            "
+          >
+            There are many frameworks for working with SPA - these are Angular
+            and Vue.js, and Ember.js, and Svelte, but as we can see from the
+            graphics, REACT is the most popular.
+          </p>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">WHERE USED?</h2>
+          <ul
+            style="
+              margin-bottom: 10px;
+              font-size: 20px;
+              max-width: 500px;
+              color: #f92672;
+            "
+          >
+            <li>Web applications.</li>
+            <li>Online stores.</li>
+            <li>Social media.</li>
+            <li>Multimedia platforms.</li>
+            <li>Applications for mobile devices.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">
+            <span style="color: #f92672">That's all</span>, thanks for watching
+            <br />and <span style="color: #f92672">see you again.</span>
+          </h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>

@@ -1,92 +1,391 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-	<head>
-		<meta charset="utf-8">
+    <title>SPA Presentation</title>
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <a href="https://en.wikipedia.org/wiki/Single-page_application">
+            <img
+              src="./examples/assets/SPA-Logo.webp"
+              alt="SPA Logo"
+              style="
+                height: 300px;
+                margin: 0 auto 2rem auto;
+                background: transparent;
+              "
+              class="demo-logo"
+            />
+          </a>
+          <h3>The SPA Presentation</h3>
+          <p>
+            <small
+              >Created by
+              <a href="https://github.com/JeckJonnyQ">VLADISLAV REUT</a></small
+            >
+          </p>
+        </section>
 
-	<body>
+        <section>
+          <p style="font-size: 50px; color: #42affa">Presentation Plan</p>
+          <ol style="font-size: 30px">
+            <li>What is SPA?</li>
+            <li>Architecture SPA</li>
+            <li>How works SPA (explain in squares)</li>
+            <li>Implementation options SPA</li>
+            <li>Advantages and disadvantages</li>
+            <li>SPA Development Tools (Frameworks SPA)</li>
+            <li>Where is SPA used?</li>
+          </ol>
+        </section>
 
-		<div class="reveal">
+        <section
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <h2 style="color: #42affa; font-size: 45px">SPA</h2>
+          <p
+            style="
+              font-size: 25px;
+              max-width: 700px;
+              width: 100%;
+              margin-left: 130px;
+            "
+          >
+            <span style="color: #42affa">A Single Page Application (SPA)</span>
+            &#150; is a web application that loads just one HTML page and
+            continually updates its setup without requiring a full page reload
+            when the user switches on.
+          </p>
+        </section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<a href="https://revealjs.com">
-						<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
-					</a>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-					</p>
-				</section>
+        <section>
+          <h2 style="color: #42affa; font-size: 45px; margin-bottom: 0px">
+            Architecture
+          </h2>
+          <p style="margin: 5px; font-size: 15px">
+            It includes the following main components:
+          </p>
+          <ul style="font-size: 25px; color: #f92672">
+            <li>HTML, CSS и JavaScript</li>
+            <li>Client-side</li>
+            <li>Routing and navigation</li>
+            <li>Components</li>
+            <li>State</li>
+            <li>AJAX</li>
+            <li>Frameworks and libraries</li>
+          </ul>
+        </section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2 style="color: #42affa; font-size: 45px; margin-bottom: 0px">
+              How works SPA
+            </h2>
+            <p style="margin: 0px; font-size: 20px">
+              Let's say you have a service where users look at colored squares.
+              The interface has buttons with colors that you can color the
+              shapes with. You have created both a static website and a
+              single-page application for the service:
+            </p>
+            <img
+              src="./examples/assets/SlideOne.PNG"
+              class="r-frame"
+              width="800"
+              height="300"
+              alt="SlideOne"
+            />
+          </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#/2/1" class="navigate-down">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Up arrow">
-						</a>
-					</section>
-				</section>
+          <section>
+            <img
+              src="./examples/assets/SlideTwo.PNG"
+              class="r-frame"
+              width="800"
+              height="300"
+              alt="SlideTwo"
+            />
+            <p style="margin: 0px; font-size: 20px">
+              At first glance, there is no difference between the site and the
+              application. To notice it, click on the button with a different
+              color.
+            </p>
+          </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-					</p>
-				</section>
+          <section>
+            <p style="margin: 0px; font-size: 20px">
+              Here it becomes noticeable that the site and the single-page
+              application behave differently:
+            </p>
+            <img
+              src="./examples/assets/SlideThree.PNG"
+              class="r-frame"
+              width="800"
+              height="450"
+              alt="SlideTwo"
+            />
+          </section>
 
-				<section data-visibility="hidden">
-					<h2>Hidden Slides</h2>
-					<p>
-						This slide is visible in the source, but hidden when the presentation is viewed. You can show all hidden slides by setting the `showHiddenSlides` config option to `true`.
-					</p>
-				</section>
+          <section>
+            <img
+              src="./examples/assets/SlideFour.PNG"
+              class="r-frame"
+              width="400"
+              height="220"
+              alt="SlideTwo"
+            />
+            <img
+              src="./examples/assets/SlideFive.PNG"
+              class="r-frame"
+              width="400"
+              height="220"
+              alt="SlideTwo"
+            />
 
-				<section data-auto-animate>
-					<h2 data-id="code-title">Pretty Code</h2>
-					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+            <p
+              style="
+                margin: 10px 10px 10px 70px;
+                font-size: 15px;
+                max-width: 800px;
+              "
+            >
+              The entire site page will be updated. It turns out that we are
+              telling the server: “Hey, make the squares green.” He says: “Okay.
+              But here you have the site header and footer again, as well as
+              buttons and metadata.” And it returns an entirely new HTML file.
+            </p>
+            <p
+              style="
+                margin: 10px 10px 10px 70px;
+                font-size: 15px;
+                max-width: 800px;
+              "
+            >
+              In a single page app, only the color of the squares will update.
+              The browser sends a request to the server, it returns the required
+              parameter, the squares are colored, everything else remains
+              unchanged.
+            </p>
+            <p
+              style="
+                margin: 10px 10px 10px 70px;
+                font-size: 15px;
+                max-width: 800px;
+              "
+            >
+              Now imagine that you have not simple squares, but an online store.
+              The user moves from one product to another, but the page does not
+              reload, but dynamically updates the photo, name, description and
+              price. This is how spas work.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <p style="font-size: 50px; color: #42affa">IMPLEMENTATION OPTIONS</p>
+          <ol style="font-size: 20px; max-width: 500px">
+            <li style="margin-bottom: 10px">
+              <span style="color: #f92672">Server Side Rendering (SSR):</span>
+              In SSR, the server renders the application in a short time.
+            </li>
+            <li style="margin-bottom: 10px">
+              <span style="color: #f92672">Client Side Rendering (CSR):</span>
+              In CSR, the browser is what runs the show and gets the main data
+              from the server, and the application generates the views and
+              injects them into the DOM.
+            </li>
+            <li style="margin-bottom: 10px">
+              <span style="color: #f92672">Static Site Generators (SSG).</span>
+              With SSG, the server returns well-organized HTML containing a lot
+              of the page's information. This method is the fastest, but if you
+              need to make a change, the process of creating a new page will
+              take some time.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">ADVANTAGES</h2>
+          <ul style="font-size: 20px; max-width: 700px">
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Fast and responsive navigation</span
+              ><br />
+              &#150; SPA loads all the necessary information and resources
+              simultaneously when the page is initially loaded. Then, when
+              moving between sections or modules, the content is displayed
+              instantly without having to refresh the entire page. This allows
+              for fast and smooth navigation between different parts of the
+              application.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Greater user interactivity</span
+              ><br />
+              &#150; Using SPA, you can easily implement interactive elements
+              such as dynamically updating data on a page, filtering or sorting
+              information without reloading the page.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Less load on the server</span
+              ><br />
+              &#150; SPA loads only the necessary code and resources on initial
+              load, and then operates in an on-demand mode to update data. This
+              reduces the load on the server and reduces the use of network
+              traffic, which is especially important when working with mobile
+              devices or slow Internet connections.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Easier development and maintenance</span
+              ><br />
+              &#150; Developers can create a single page application using one
+              programming language - JavaScript, instead of using different
+              technologies for developing the client and server parts.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Ability to work offline</span
+              ><br />
+              &#150; SPA saves the last loaded page and data on the user's
+              device.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">DISADVANTAGES</h2>
+          <ul style="font-size: 20px; max-width: 700px">
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Large initial download size</span
+              ><br />
+              &#150; For large and complex applications, this can result in long
+              loading times, especially when using slow Internet connections or
+              mobile devices.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Limited search engine support</span
+              ><br />
+              &#150; Since all information on an SPA is displayed on one page,
+              search engines may have difficulty processing and indexing the
+              content.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >RAM consumption</span
+              ><br />
+              &#150; SPA stores all downloaded resources in RAM on the client
+              device. When working with a large amount of data or using an
+              application for a long time, this can lead to significant memory
+              consumption and slow down the device.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 15px">
+              <span style="font-size: 20px; color: #f92672"
+                >Safety problems</span
+              ><br />
+              &#150; Since all application code and data resides on the client
+              side, this makes SPA more susceptible to attacks and possible data
+              leaks.
+            </li>
+          </ul>
+        </section>
+
+        <section
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <h2 style="color: #42affa; font-size: 45px">SPA FRAMEWORKS</h2>
+          <img
+            style="margin: 0px"
+            src="./examples/assets/GraphOne.PNG"
+            class="r-frame"
+            width="600"
+            height="300"
+            alt="SlideOne"
+          />
+          <p
+            style="
+              font-size: 25px;
+              max-width: 700px;
+              width: 100%;
+              margin-left: 130px;
+            "
+          >
+            There are many frameworks for working with SPA - these are Angular
+            and Vue.js, and Ember.js, and Svelte, but as we can see from the
+            graphics, REACT is the most popular.
+          </p>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">WHERE USED?</h2>
+          <ul
+            style="
+              margin-bottom: 10px;
+              font-size: 20px;
+              max-width: 500px;
+              color: #f92672;
+            "
+          >
+            <li>Web applications.</li>
+            <li>Online stores.</li>
+            <li>Social media.</li>
+            <li>Multimedia platforms.</li>
+            <li>Applications for mobile devices.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="color: #42affa; font-size: 45px">
+            <span style="color: #f92672">That's all</span>, thanks for watching
+            <br />and <span style="color: #f92672">see you again.</span>
+          </h2>
+        </section>
+
+        <!-- 
+        <section data-visibility="hidden">
+          <h2>Hidden Slides</h2>
+          <p>
+            This slide is visible in the source, but hidden when the
+            presentation is viewed. You can show all hidden slides by setting
+            the `showHiddenSlides` config option to `true`.
+          </p>
+        </section> -->
+        <!-- 
+        <section data-auto-animate>
+          <h2 data-id="code-title">Pretty Code</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs javascript" data-trim data-line-numbers>
 						import React, { useState } from 'react';
 
 						function Example() {
@@ -97,12 +396,17 @@
 						  );
 						}
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
-				</section>
+          <p>
+            Code syntax highlighting courtesy of
+            <a href="https://highlightjs.org/usage/">highlight.js</a>.
+          </p>
+        </section> -->
 
-				<section data-auto-animate>
-					<h2 data-id="code-title">With Animations</h2>
-					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+        <!-- <section data-auto-animate>
+          <h2 data-id="code-title">With Animations</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
 						import React, { useState } from 'react';
 
 						function Example() {
@@ -131,351 +435,603 @@
 						  );
 						}
 					</script></code></pre>
-				</section>
+        </section> -->
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back out.
-					</p>
-					<p>
-						(NOTE: Use ctrl + click in Linux.)
-					</p>
-				</section>
+        <!-- <section>
+          <h2>Point of View</h2>
+          <p>Press <strong>ESC</strong> to enter the slide overview.</p>
+          <p>
+            Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in
+            Linux) and click on any element to zoom towards it using
+            <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to
+            zoom back out.
+          </p>
+          <p>(NOTE: Use ctrl + click in Linux.)</p>
+        </section> -->
 
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<h2>Auto-Animate</h2>
-					<p>Automatically animate matching elements across slides with <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
-					<div class="r-hstack justify-center">
-						<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-						<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-						<div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div class="r-hstack justify-center">
-						<div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
-						<div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
-						<div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
-					</div>
-					<h2 style="margin-top: 20px;">Auto-Animate</h2>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div class="r-stack">
-						<div data-id="box1" style="background: cyan; width: 300px; height: 300px;"></div>
-						<div data-id="box2" style="background: magenta; width: 200px; height: 200px;"></div>
-						<div data-id="box3" style="background: yellow; width: 100px; height: 100px;"></div>
-					</div>
-					<h2 style="margin-top: 20px;">Auto-Animate</h2>
-				</section>
+        <!-- <section
+          data-auto-animate
+          data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"
+        >
+          <h2>Auto-Animate</h2>
+          <p>
+            Automatically animate matching elements across slides with
+            <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.
+          </p>
+          <div class="r-hstack justify-center">
+            <div
+              data-id="box1"
+              style="
+                background: #999;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                border-radius: 5px;
+              "
+            ></div>
+            <div
+              data-id="box2"
+              style="
+                background: #999;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                border-radius: 5px;
+              "
+            ></div>
+            <div
+              data-id="box3"
+              style="
+                background: #999;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                border-radius: 5px;
+              "
+            ></div>
+          </div>
+        </section> -->
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+        <!-- <section
+          data-auto-animate
+          data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"
+        >
+          <div class="r-hstack justify-center">
+            <div
+              data-id="box1"
+              data-auto-animate-delay="0"
+              style="
+                background: cyan;
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+              "
+            ></div>
+            <div
+              data-id="box2"
+              data-auto-animate-delay="0.1"
+              style="
+                background: magenta;
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+              "
+            ></div>
+            <div
+              data-id="box3"
+              data-auto-animate-delay="0.2"
+              style="
+                background: yellow;
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+              "
+            ></div>
+          </div>
+          <h2 style="margin-top: 20px">Auto-Animate</h2>
+        </section> -->
+        <!-- 
+        <section
+          data-auto-animate
+          data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"
+        >
+          <div class="r-stack">
+            <div
+              data-id="box1"
+              style="background: cyan; width: 300px; height: 300px"
+            ></div>
+            <div
+              data-id="box2"
+              style="background: magenta; width: 200px; height: 200px"
+            ></div>
+            <div
+              data-id="box3"
+              style="background: yellow; width: 100px; height: 100px"
+            ></div>
+          </div>
+          <h2 style="margin-top: 20px">Auto-Animate</h2>
+        </section> -->
+        <!-- 
+        <section>
+          <h2>Touch Optimized</h2>
+          <p>
+            Presentations look great on touch devices, like mobile phones and
+            tablets. Simply swipe through your slides.
+          </p>
+        </section> -->
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown Support
+        <!-- <section data-markdown>
+          <script type="text/template">
+            ## Markdown Support
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+            Write content using inline or external Markdown.
+            Instructions and more info available in the [docs](https://revealjs.com/markdown/).
 
-						```html []
-						<section data-markdown>
-						  ## Markdown Support
+            ```html []
+            <section data-markdown>
+              ## Markdown Support
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [docs](https://revealjs.com/markdown/).
-						</section>
-						```
-					</script>
-				</section>
+              Write content using inline or external Markdown.
+              Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+            </section>
+            ```
+          </script>
+        </section> -->
 
-				<section>
-					<p>Add the <code>r-fit-text</code> class to auto-size text</p>
-					<h2 class="r-fit-text">FIT TEXT</h2>
-				</section>
+        <!-- <section>
+          <p>Add the <code>r-fit-text</code> class to auto-size text</p>
+          <h2 class="r-fit-text">FIT TEXT</h2>
+        </section> -->
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+        <!-- <section>
+          <section id="fragments">
+            <h2>Fragments</h2>
+            <p>Hit the next arrow...</p>
+            <p class="fragment">... to step through ...</p>
+            <p>
+              <span class="fragment">... a</span>
+              <span class="fragment">fragmented</span>
+              <span class="fragment">slide.</span>
+            </p>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p>
-							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
-							<span style="display: inline-block;" class="fragment fade-up">up, </span>
-							<span style="display: inline-block;" class="fragment fade-down">down, </span>
-							<span style="display: inline-block;" class="fragment fade-left">left</span>
-						</p>
-						<p class="fragment fade-in-then-out">fade-in-then-out</p>
-						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-					</section>
-				</section>
+            <aside class="notes">
+              This slide has fragments which are also stepped through in the
+              notes window.
+            </aside>
+          </section>
+          <section>
+            <h2>Fragment Styles</h2>
+            <p>There's different types of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p>
+              <span style="display: inline-block" class="fragment fade-right"
+                >fade-right,
+              </span>
+              <span style="display: inline-block" class="fragment fade-up"
+                >up,
+              </span>
+              <span style="display: inline-block" class="fragment fade-down"
+                >down,
+              </span>
+              <span style="display: inline-block" class="fragment fade-left"
+                >left</span
+              >
+            </p>
+            <p class="fragment fade-in-then-out">fade-in-then-out</p>
+            <p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+            <p>
+              Highlight <span class="fragment highlight-red">red</span>
+              <span class="fragment highlight-blue">blue</span>
+              <span class="fragment highlight-green">green</span>
+            </p>
+          </section>
+        </section> -->
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+        <!-- <section id="transitions">
+          <h2>Transition Styles</h2>
+          <p>
+            You can select from different transitions, like: <br />
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=slide#/transitions">Slide</a> -
+            <a href="?transition=convex#/transitions">Convex</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a>
+          </p>
+        </section> -->
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a> -
-						<a href="#/themes" onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+        <!-- <section id="themes">
+          <h2>Themes</h2>
+          <p>
+            reveal.js comes with a few themes built in: <br />
+            Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+        <!-- <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;"
+              >Black (default)</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;"
+              >White</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;"
+              >League</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;"
+              >Sky</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;"
+              >Beige</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;"
+              >Simple</a
+            >
+            <br />
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;"
+              >Serif</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;"
+              >Blood</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;"
+              >Night</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;"
+              >Moon</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;"
+              >Solarized</a
+            > -->
+        <!-- </p>
+        </section> -->
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
-						<h2>Gradient Backgrounds</h2>
-						<pre><code class="hljs html wrap">&lt;section data-background-gradient=
+        <!-- <section>
+          <section data-background="#dddddd">
+            <h2>Slide Backgrounds</h2>
+            <p>
+              Set <code>data-background="#dddddd"</code> on a slide to change
+              the background color. All CSS color formats are supported.
+            </p>
+            <a href="#" class="navigate-down">
+              <img
+                class="r-frame"
+                style="background: rgba(255, 255, 255, 0.1)"
+                width="178"
+                height="238"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+            </a>
+          </section>
+          <section
+            data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
+          >
+            <h2>Gradient Backgrounds</h2>
+            <pre><code class="hljs html wrap">&lt;section data-background-gradient=
 							"linear-gradient(to bottom, #ddd, #191919)"&gt;</code></pre>
-					</section>
-					<section data-background="https://static.slid.es/reveal/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://static.slid.es/reveal/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
+          </section>
+          <section
+            data-background="https://static.slid.es/reveal/image-placeholder.png"
+          >
+            <h2>Image Backgrounds</h2>
+            <pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+          </section>
+          <section
+            data-background="https://static.slid.es/reveal/image-placeholder.png"
+            data-background-repeat="repeat"
+            data-background-size="100px"
+          >
+            <h2>Tiled Backgrounds</h2>
+            <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+          </section>
+          <section
+            data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+            data-background-color="#000000"
+          >
+            <div
+              style="
+                background-color: rgba(0, 0, 0, 0.9);
+                color: #fff;
+                padding: 20px;
+              "
+            >
+              <h2>Video Backgrounds</h2>
+              <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+            </div>
+          </section>
+          <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+            <h2>... and GIFs!</h2>
+          </section>
+        </section> -->
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+        <!-- <section
+          data-transition="slide"
+          data-background="#4d7e65"
+          data-background-transition="zoom"
+        >
+          <h2>Background Transitions</h2>
+          <p>
+            Different background transitions are available via the
+            backgroundTransition option. This one's called "zoom".
+          </p>
+          <pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+        </section> -->
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+        <!-- <section
+          data-transition="slide"
+          data-background="#b5533c"
+          data-background-transition="zoom"
+        >
+          <h2>Background Transitions</h2>
+          <p>You can override background transitions per-slide.</p>
+          <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+        </section> -->
 
-				<section data-background-iframe="https://hakim.se" data-background-interactive>
-					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2>Iframe Backgrounds</h2>
-						<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
-					</div>
-				</section>
+        <!-- <section
+          data-background-iframe="https://hakim.se"
+          data-background-interactive
+        >
+          <div
+            style="
+              position: absolute;
+              width: 40%;
+              right: 0;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5),
+                0 5px 25px rgba(0, 0, 0, 0.2);
+              background-color: rgba(0, 0, 0, 0.9);
+              color: #fff;
+              padding: 20px;
+              font-size: 20px;
+              text-align: left;
+            "
+          >
+            <h2>Iframe Backgrounds</h2>
+            <p>
+              Since reveal.js runs on the web, you can easily embed other web
+              content. Try interacting with the page in the background.
+            </p>
+          </div>
+        </section> -->
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+        <!-- <section>
+          <h2>Marvelous List</h2>
+          <ul>
+            <li>No order here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+          </ul>
+        </section> -->
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+        <!-- <section>
+          <h2>Fantastic Ordered List</h2>
+          <ol>
+            <li>One is smaller than...</li>
+            <li>Two is smaller than...</li>
+            <li>Three!</li>
+          </ol>
+        </section> -->
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
+        <!-- <section>
+          <h2>Tabular Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Value</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apples</td>
+                <td>$1</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Lemonade</td>
+                <td>$2</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Bread</td>
+                <td>$3</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </section> -->
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+        <!-- <section>
+          <h2>Clever Quotes</h2>
+          <p>
+            These guys come in two forms, inline:
+            <q
+              cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"
+              >The nice thing about standards is that there are so many to
+              choose from</q
+            >
+            and block:
+          </p>
+          <blockquote
+            cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"
+          >
+            &ldquo;For years there has been a theory that millions of monkeys
+            typing at random on millions of typewriters would reproduce the
+            entire works of Shakespeare. The Internet has proven this theory to
+            be untrue.&rdquo;
+          </blockquote>
+        </section> -->
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+        <!-- <section>
+          <h2>Intergalactic Interconnections</h2>
+          <p>
+            You can link between slides internally,
+            <a href="#/2/3">like this</a>.
+          </p>
+        </section> -->
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+        <!-- <section>
+          <h2>Speaker View</h2>
+          <p>
+            There's a
+            <a href="https://revealjs.com/speaker-view/">speaker view</a>. It
+            includes a timer, preview of the upcoming slide as well as your
+            speaker notes.
+          </p>
+          <p>Press the <em>S</em> key to try it out.</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your
+            presentation, but you can see them if you open the speaker notes
+            window (hit 's' on your keyboard).
+          </aside>
+        </section> -->
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+        <!-- <section>
+          <h2>Export to PDF</h2>
+          <p>
+            Presentations can be
+            <a href="https://revealjs.com/pdf-export/">exported to PDF</a>,
+            here's an example:
+          </p>
+          <iframe
+            data-src="https://www.slideshare.net/slideshow/embed_code/42840540"
+            width="445"
+            height="355"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            scrolling="no"
+            style="border: 3px solid #666; margin-bottom: 5px; max-width: 100%"
+            allowfullscreen
+          >
+          </iframe>
+        </section> -->
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+        <!-- <section>
+          <h2>Global State</h2>
+          <p>
+            Set <code>data-state="something"</code> on a slide and
+            <code>"something"</code>
+            will be added as a class to the document element when the slide is
+            open. This lets you apply broader style changes, like switching the
+            page background.
+          </p>
+        </section> -->
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+        <!-- <section data-state="customevent">
+          <h2>State Events</h2>
+          <p>
+            Additionally custom events can be triggered on a per slide basis by
+            binding to the <code>data-state</code> name.
+          </p>
+          <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 Reveal.on( 'customevent', function() {
 	console.log( '"customevent" has fired' );
 } );
 					</code></pre>
-				</section>
+        </section> -->
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+        <!-- <section>
+          <h2>Take a Moment</h2>
+          <p>
+            Press B or . on your keyboard to pause the presentation. This is
+            helpful when you're on stage and want to take distracting slides off
+            the screen.
+          </p>
+        </section> -->
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
-						<li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
-						<li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+        <!-- <section>
+          <h2>Much more</h2>
+          <ul>
+            <li>Right-to-left support</li>
+            <li>
+              <a href="https://revealjs.com/api/">Extensive JavaScript API</a>
+            </li>
+            <li>
+              <a href="https://revealjs.com/auto-slide/">Auto-progression</a>
+            </li>
+            <li>
+              <a href="https://revealjs.com/backgrounds/#parallax-background"
+                >Parallax backgrounds</a
+              >
+            </li>
+            <li>
+              <a href="https://revealjs.com/keyboard/"
+                >Custom keyboard bindings</a
+              >
+            </li>
+          </ul>
+        </section> -->
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+        <!-- <section style="text-align: left">
+          <h1>THE END</h1>
+          <p>
+            - <a href="https://slides.com">Try the online editor</a> <br />
+            -
+            <a href="https://github.com/hakimel/reveal.js"
+              >Source code &amp; documentation</a
+            >
+          </p>
+        </section> -->
+      </div>
+    </div>
 
-			</div>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
 
-		</div>
-
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/search/search.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-
-			// Also available as an ES module, see:
-			// https://revealjs.com/initialization/
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				center: true,
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-			});
-
-		</script>
-
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+    </script>
+  </body>
 </html>
